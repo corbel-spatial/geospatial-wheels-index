@@ -22,7 +22,6 @@ python sync.py
 To lint:
 
 ```shell
-black .
 ruff format
 ```
 

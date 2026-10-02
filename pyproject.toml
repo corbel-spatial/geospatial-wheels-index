@@ -2,10 +2,10 @@
 name = "geospatial-wheels-index"
 version = "0.1.0"
 description = "Generate a pip simple index from cgohlke/geospatial-wheels"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "pandas>=2.3.3",
-    "pygithub>=2.9.0",
-    "semver>=3.0.4",
+    "pandas>=3.0.6",
+    "pygithub>=2.10.0",
+    "semver>=3.1.0",
 ]
-optional-dependencies = {dev = ["black", "myst-parser", "nbsphinx", "notebook", "pandas-stubs", "pydata-sphinx-theme", "pytest", "ruff", "sphinx", "sphinx-copybutton", "uv"]}
+optional-dependencies = {dev = ["myst-parser", "nbsphinx", "notebook", "pandas-stubs", "pydata-sphinx-theme", "pytest", "ruff", "sphinx", "sphinx-copybutton", "uv"]}

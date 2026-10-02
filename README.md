@@ -9,33 +9,37 @@ Simply use `pip install` with the `--index` flag, for example to install `GDAL`:
 pip install --index https://gisidx.github.io/gwi gdal
 ```
 
-Python 3.10 through 3.14 is supported on `win_arm64`, `win_amd64`, and `win32` architectures. 
-Packages available on this index: 
+The current release supports Python 3.12 through 3.15 on `win_arm64`, `win_amd64`, and `win32` architectures 
+for the following packages:
 
-- basemap
-- Cartopy
-- cftime
-- Fiona
-- GDAL
-- h5py
-- netCDF4
-- pygeos
-- pyogrio
-- pyproj
-- rasterio
-- Rtree
-- shapely
+- [basemap](https://pypi.org/project/basemap/)
+- [Cartopy](https://pypi.org/project/Cartopy/)
+- [cftime](https://pypi.org/project/cftime/)
+- [Fiona](https://pypi.org/project/Fiona/)
+- [GDAL](https://pypi.org/project/GDAL/)
+- [netCDF4](https://pypi.org/project/netCDF4/)
+- [pyogrio](https://pypi.org/project/pyogrio/)
+- [pyproj](https://pypi.org/project/pyproj/)
+- [rasterio](https://pypi.org/project/rasterio/)
+- [Rtree](https://pypi.org/project/Rtree/)
+- [shapely](https://pypi.org/project/shapely/)
+- [tables](https://pypi.org/project/tables/)
 
-To install all packages, first install dependencies from PyPI:
+Additional packages from past releases (`h5py`, etc.) are also available in this index. 
+
+To install all packages with `uv`:
 
 ```shell
-pip install affine attrs certifi click click-plugins cligj basemap_data matplotlib numpy pyshp
+uv pip install --index https://gisidx.github.io/gwi basemap cartopy cftime fiona gdal netcdf4 pyproj rasterio rtree shapely tables
 ```
 
-Then install all packages from `cgohlke/geospatial-wheels` via this package index:
+Or using `pip`:
 
 ```shell
-pip install --index https://gisidx.github.io/gwi basemap cartopy cftime fiona gdal h5py netcdf4 pygeos pyogrio pyproj rasterio rtree shapely
+# First install dependencies from PyPI 
+pip install affine attrs basemap_data blosc2 certifi click click-plugins cligj matplotlib numexpr numpy packaging py-cpuinfo pyshp
+# Then the packages from the index
+pip install --index https://gisidx.github.io/gwi basemap cartopy cftime fiona gdal netcdf4 pyproj rasterio rtree shapely tables
 ```
 
 ### Notes
